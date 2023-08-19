@@ -1,8 +1,6 @@
----
 clientInfoSecret:
-  create: false
-  name: "synology-client-info"
-# Specifies affinity, nodeSelector and tolerations for the controller StatefulSet
+  create: true
+  name: synology-client-info
 controller:
   affinity: {}
   nodeSelector: {}
