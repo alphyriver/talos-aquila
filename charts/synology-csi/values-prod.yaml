@@ -8,27 +8,6 @@ controller:
   nodeSelector: {}
   tolerations: []
 fullnameOverride: ""
-images:
-  attacher:
-    image: registry.k8s.io/sig-storage/csi-attacher
-    pullPolicy: IfNotPresent
-    tag: v4.2.0
-  nodeDriverRegistrar:
-    image: registry.k8s.io/sig-storage/csi-node-driver-registrar
-    pullPolicy: IfNotPresent
-    tag: v2.6.3
-  provisioner:
-    image: registry.k8s.io/sig-storage/csi-provisioner
-    pullPolicy: IfNotPresent
-    tag: v3.4.0
-  resizer:
-    image: registry.k8s.io/sig-storage/csi-resizer
-    pullPolicy: IfNotPresent
-    tag: v1.7.0
-  snapshotter:
-    image: registry.k8s.io/sig-storage/csi-snapshotter
-    pullPolicy: IfNotPresent
-    tag: v4.2.1
 installCSIDriver: true
 nameOverride: ""
 node:
