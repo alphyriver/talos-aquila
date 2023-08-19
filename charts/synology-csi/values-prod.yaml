@@ -22,14 +22,16 @@ storageClasses:
     reclaimPolicy: Retain
     volumeBindingMode: Immediate
     parameters:
-      dsm: "192.168.1.120"
+      dsm: "synology.polaris"
+      type: thin
       fsType: btrfs
       location: /volume2
   synology-csi-delete:
     isDefault: true
     reclaimPolicy: Delete
     parameters:
-      dsm: "192.168.1.120"
+      dsm: "synology.polaris"
+      type: thin
       fsType: btrfs
       location: /volume2
 volumeSnapshotClasses:
