@@ -83,7 +83,7 @@ spec:
         app: synology-csi-controller
     spec:
       serviceAccountName: csi-controller-sa
-      hostNetwork: true
+      hostNetwork: false
       containers:
         - name: csi-provisioner
           securityContext:
