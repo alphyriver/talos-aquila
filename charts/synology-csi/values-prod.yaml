@@ -45,7 +45,7 @@ snapshotter:
   nodeSelector: {}
   tolerations: []
 storageClasses:
-  retain:
+  synology-csi-retain:
     isDefault: false
     reclaimPolicy: Retain
     volumeBindingMode: Immediate
@@ -53,7 +53,7 @@ storageClasses:
       dsm: "synology.polaris"
       fsType: btrfs
       location: /volume2
-  delete:
+  synology-csi-delete:
     isDefault: true
     reclaimPolicy: Delete
     parameters:
@@ -61,11 +61,11 @@ storageClasses:
       fsType: btrfs
       location: /volume2
 volumeSnapshotClasses:
-  retain:
+  synology-csi-retain:
     deletionPolicy: Retain
     parameters:
       description: "Kubernetes CSI"
-  delete:
+  synology-csi-delete:
     deletionPolicy: Delete
     parameters:
       description: "Kubernetes CSI"
