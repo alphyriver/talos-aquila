@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: synology-csi
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: storage
+  source:
+    repoURL: https://github.com/alphyriver/talos-canopus.git
+    targetRevision: HEAD
+    path: addons/synology-csi/charts/synology-csi
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: synology-csi
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  revisionHistoryLimit: 10

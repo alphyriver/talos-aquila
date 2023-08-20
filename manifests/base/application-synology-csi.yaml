@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: synology-csi
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: storage
+  source:
+    repoURL: https://github.com/alphyriver/talos-aquila.git
+    targetRevision: HEAD
+    path: deploy/kubernetes/v1.20
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: synology-csi
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    managedNamespaceMetadata:
+        labels:
+          pod-security.kubernetes.io/enforce: privileged
+          pod-security.kubernetes.io/audit: privileged
+          pod-security.kubernetes.io/warn: privileged
+    syncOptions:
+      - CreateNamespace=true
+  revisionHistoryLimit: 10
