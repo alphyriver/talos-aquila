@@ -6,6 +6,6 @@ resources:
   - aquila-namespace.yml
   - aquila-node.yml
   - aquila-sealed-secret.yaml
-  - aquila-snapshotter.yml
+  - aquila-snapshotter.yaml
   - aquila-storage-class.yml
   - aquila-volume-snapshot.yml
