@@ -8,4 +8,4 @@ resources:
   - aquila-sealed-secret.yaml
   - aquila-snapshotter.yaml
   - aquila-storage-class.yml
-  - aquila-volume-snapshot.yml
+  - aquila-volume-snapshot-class.yml
