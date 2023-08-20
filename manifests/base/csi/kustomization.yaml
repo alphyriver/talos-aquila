@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - aquila-controller.yml
   - aquila-csi-driver.yml
-  - aquila-namespace.yml
   - aquila-node.yml
   - aquila-sealed-secret.yaml
   - aquila-snapshotter.yaml
