@@ -1,11 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - aquila-controller.yaml
-  - aquila-csi-druver.yaml
-  - aquila-namespace.yaml
-  - aquila-node.yaml
+  - aquila-controller.yml
+  - aquila-csi-druver.yml
+  - aquila-namespace.yml
+  - aquila-node.yml
   - aquila-sealed-secret.yaml
-  - aquila-snapshotter.yaml
-  - aquila-storage-class.yaml
-  - aquila-volume-snapshot.yaml
+  - aquila-snapshotter.yml
+  - aquila-storage-class.yml
+  - aquila-volume-snapshot.yml
